@@ -1,5 +1,5 @@
 FFMD: FFMD es un Framework Minimalista creado por Daes12
-Autor: Daniel Echeverría (Daes12)
+Autor: Daniel Echeverr&iacute;a (Daes12)
 Idea principal: Framework personal, que utilice la menor cantidad de memoria y
 espacio, rápido, configurable y reutilizable.
 Concepto: Un archivo, una clase, un método.
