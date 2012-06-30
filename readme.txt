@@ -1,4 +1,4 @@
-FFMD: FFMD es un Framework Minimalista creado por Daes12
+FFMD: FFMD es un Framework Minimalista creado por Daes12 (para PHP)
 Autor: Daniel Echeverria (Daes12)
 Idea principal: Framework personal, que utilice la menor cantidad de memoria y
 espacio, rapido, configurable y reutilizable.
@@ -16,14 +16,14 @@ Mi correo? daes12@gmail.com
 
 
 PRESENTACIoN:
-Hola! Gracias por tu interes en este peque–o proyecto.
+Hola! Gracias por tu interes en este pequeno proyecto.
 He utilizado unos pocos Frameworks para PHP los cuales tienen muchas ventajas y
 agilizan el trabajo; pero siempre consumen una cantidad considerable de memoria
 y hacen muchos calculos internos lo cual afecta la velocidad (aunque casi no se
 percibe).
 
 Por lo cual he decidido crear este Framework (si se le puede llamar asi) y hacerlo
-peque–o; tanto que contenga solamente las capacidades necesarias para trabajar
+pequeno; tanto que contenga solamente las capacidades necesarias para trabajar
 con URLs amigables (del tipo: sitio.com/usuario/daniel), la POO y el modelo MVC.
 
 La palabra "Minimalista" le quedara corta a este Framework por lo que cualquier
