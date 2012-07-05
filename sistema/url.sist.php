@@ -15,8 +15,8 @@ if(!defined('SIST_ACTIVO')){ exit(); }
 $Configuraciones = new configuraciones();
 
 
-/**Controlador predeterminado**/
-$Controlador = $Configuraciones->General['controlador'];
+/**Controlador**/
+$Controlador = '';
 
 
 /**Mensaje de error**/

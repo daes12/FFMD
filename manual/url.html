@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>FFMD Manual de Usuario</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		
+		<!-- Le styles -->
+		<link href="recursos/css/02.bootstrap.min.css" rel="stylesheet" />
+		<style type="text/css">
+			body{
+				padding-top: 40px;
+				padding-bottom: 40px;
+				background: #f0f0f0;
+			}
+			.row{
+				margin-top: 20px;
+			}
+			.activo{
+				background: #dfdfdf;
+			}
+			.tl { text-align: left }
+			.tr { text-align: right }
+			.tc { text-align: center }
+			.tb { text-align: block }
+		</style>
+		<link href="recursos/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		
+	</head>
+	
+	<body>
+		
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="index.html">FFMD</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li><a href="index.html">Inicio</a></li>
+							<li class="dropdown activo" id="menu1">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+									Manual
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="estructura.html">Estructura</a></li>
+									<li><a href="url.html">URL</a></li>
+									<li><a href="configuraciones.html">Configuraciones</a></li>
+									<li><a href="controladores.html">Controladores</a></li>
+									<li><a href="modelos.html">Modelos</a></li>
+									<li><a href="vistas.html">Vistas</a></li>
+									<li><a href="basedatos.html">Bases de Datos</a></li>
+									<li><a href="errores.html">P&aacute;ginas de Errores</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			
+			
+			<div class="page-header">
+				<h4>FFMD Manual de Usuario v. 0.04</h4>
+				<h1>URL</h1>
+			</div>
+			
+			
+			<div class="row">
+				<div class="span12">
+					<p>
+						Este Framework est&aacute; dise&ntilde;ado para trabajar con URL amigables del tipo: sitio.com/usuario/daniel; en la cual se encuentra la p&aacute;gina solicitada (usuario) y la variable que debe procesar (daniel).
+					</p>
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				
+				<div class="span12">
+					
+					<h3>.htaccess</h3>
+					
+					<p>
+						En la carpeta ra&iacute;z creamos un archivo <a href="http://httpd.apache.org/docs/2.0/howto/htaccess.html">.htaccess</a> el cual se encargar&aacute; de enviar todas las solicitudes a nuestro archivo index.php. La estructura propuesta para este archivo es la siguiente:
+						<pre>
+RewriteEngine On
+RewriteBase /
+
+#Envio de todas las solicitudes a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php?variables=$1 [L]
+
+IndexIgnore *</pre>
+					</p>
+					
+				</div>
+				
+			</div>
+			
+			
+			<div class="row">
+				
+				<div class="span12">
+					
+					<h3>Controlador y Variables</h3>
+					
+					<p>El Framework dividir&aacute; la informaci&oacute;n de la URL para identificar el Controlador solicitado y las Variables.</p>
+					
+					<p>
+						Si el Controlador se encuentra en una subcarpeta debe indicarse en la URL; p.ej.:
+						<br />
+						Si el Controlador "buscar" se encuentra en la carpeta "musica" la URL ser&aacute; as&iacute;:
+						<pre>sitio.com/musica/buscar</pre>
+					</p>
+					
+					<p>
+						Si se desea enviar una o m&aacute;s variables se agregan en la URL despu&eacute;s de la ruta hacia el Controlador; p.ej.:
+						<br />
+						Si al ejemplo anterior le deseamos enviar las variables "nuevo" y "pop" la URL ser&aacute; as&iacute;:
+						<pre>sitio.com/musica/buscar/nuevo/pop</pre>
+						<br />
+						Las variables ser&aacute;n enviadas al Controlador en forma de array. Tomando como base el ejemplo anterior, las variables tomaran la siguiente estructura:
+						<pre>
+array(
+  0 => "nuevo",
+  1 => "pop"
+)</pre>
+					</p>
+					
+				</div>
+				
+			</div>
+			
+			
+			<div class="row">
+				
+				<div class="span12">
+					
+					<h3>Caracteres Permitidos</h3>
+					
+					<p>
+						Los &uacute;nicos caracteres permitidos en la URL por el Framework: Caracteres alfanum&eacute;ricos y el gui&oacute;n bajo (A-Za-z0-9_).
+						<br />
+						El Framework bloquear&aacute; las URLs que contengan caracteres no permitidos.
+					</p>
+					
+				</div>
+				
+			</div>
+			
+			
+			<hr>
+			
+			
+			<div class="row">
+				<div class="span4">
+					<p>&copy; daes12 2012</p>
+				</div>
+				<div class="span4">
+					&nbsp;
+				</div>
+				<div class="span4">
+					<p>
+						<strong>Recursos utilizados en este manual:</strong>
+						<br />
+						<a href="http://jquery.com/">JQuery</a>
+						<br />
+						<a href="http://twitter.github.com/bootstrap/index.html">Bootstrap, from Twitter</a>
+						<br />
+						<a href="http://glyphicons.com/">Glyphicons Free</a>
+					</p>
+				</div>
+			</div>
+			
+		</div> <!-- /container -->
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="recursos/js/jquery.min.js"></script>
+		<script src="recursos/js/bootstrap.min.js"></script>
+		
+		<script>
+			$('.dropdown-toggle').dropdown()
+		</script>
+		
+	</body>
+	
+</html>

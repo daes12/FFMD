@@ -14,20 +14,12 @@ class configuraciones
 {
 	
 	//Atributos de la clase
-	var $General = array();
 	var $BD = array();
 	var $Auto_Modelos;
 	
 	
 	function configuraciones()
 	{
-		
-		/**
-		 *Configuraciones Generales
-		*/
-		//Controlador principal. Es necesario?
-		$this->General['controlador'] = 'ejemplo';
-		
 		
 		/**
 		 *Configuraciones para la Base de datos
@@ -39,8 +31,8 @@ class configuraciones
 		
 		
 		/**
-		 *Modelos que se cargan automaticamente segun el usuario lo solicite.
-		 *array(Nombre_Clase => Ubucacion_Modelo)
+		 *Modelos que se cargan automaticamente en el sistema.
+		 *array(Nombre_Clase => Ubicacion_Modelo)
 		*/
 		$this->Auto_Modelos = array(
 			//'ejemplo' => 'carpeta/ejemplo'

@@ -3,7 +3,7 @@ Autor: Daniel Echeverria (Daes12)
 Idea principal: Framework personal, que utilice la menor cantidad de memoria y
 espacio, rapido, configurable y reutilizable.
 Concepto: Un archivo, una clase, un metodo.
-Version: 0.03
+Version: 0.04
 
 Nota: Parece que no funcionan las tildes, por lo cual pido perdon si es poco entendible.
 
@@ -38,8 +38,6 @@ Este Framework esta pensado para gente como yo :)
 
 
 PENDIENTES:
-->Manual de Usuario (Lo principal). Creo que este Framework es tan simple que
-podras conocerlo simplemente viendo los archivos de ejemplo que incluye.
 ->Paginas de error personalizadas.
 ->No soy un conocedor de las reglas para documentar codigo, si me das una mano
 te agradecere mucho (si es que existe una regla para ello).

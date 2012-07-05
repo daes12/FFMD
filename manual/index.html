@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>FFMD Manual de Usuario</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		
+		<!-- Le styles -->
+		<link href="recursos/css/02.bootstrap.min.css" rel="stylesheet" />
+		<style type="text/css">
+			body{
+				padding-top: 40px;
+				padding-bottom: 40px;
+				background: #f0f0f0;
+			}
+			.row{
+				margin-top: 20px;
+			}
+			.activo{
+				background: #dfdfdf;
+			}
+			.tl { text-align: left }
+			.tr { text-align: right }
+			.tc { text-align: center }
+			.tb { text-align: block }
+		</style>
+		<link href="recursos/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		
+	</head>
+	
+	<body>
+		
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="https://github.com/daes12/FFMD">FFMD</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li class="activo"><a href="index.html">Inicio</a></li>
+							<li class="dropdown" id="menu1">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+									Manual
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="estructura.html">Estructura</a></li>
+									<li><a href="url.html">URL</a></li>
+									<li><a href="configuraciones.html">Configuraciones</a></li>
+									<li><a href="controladores.html">Controladores</a></li>
+									<li><a href="modelos.html">Modelos</a></li>
+									<li><a href="vistas.html">Vistas</a></li>
+									<li><a href="basedatos.html">Bases de Datos</a></li>
+									<li><a href="errores.html">P&aacute;ginas de Errores</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			
+			
+			<div class="page-header">
+				<h4>FFMD Manual de Usuario v. 0.04</h4>
+				<h1>Bienvenido</h1>
+			</div>
+			
+			
+			<div class="row">
+				
+				<div class="span12">
+					<p>
+						Gracias por probar y usar <a href="https://github.com/daes12/FFMD">FFMD</a>
+						<br />
+						FFMD es el acr&oacute;nimo para "FFMD es un Framework Minimalista creado por Daes12 (para PHP)".
+					</p>
+				</div>
+				
+			</div>
+			
+			
+			<div class="row">
+				
+				<div class="span6">
+					<h3><img src="recursos/img/presentacion.png" /> Presentaci&oacute;n</h3>
+					
+					<p>
+						El objetivo de este framework es: Ser peque&ntilde;o y como resultado r&aacute;pido y ligero.
+						<br />
+						Es un proyecto personal pensado en aquellos (como yo) que quieren sacar ventaja de la <a href="http://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos">POO</a>, el <a href="http://es.wikipedia.org/wiki/Modelo_Vista_Controlador">MVC</a> y las url amigables; pero quieren un framework que sea casi imperceptible en el consumo de recursos.
+					</p>
+					
+					<p>
+						Es probable que extra&ntilde;e los plugins, helpers y librerias; pero agregarlas nos llevar&iacute;a a imcumplir la promesa de rapid&eacute;z y bajo consumo de recursos.
+						<br />
+						Si desea un framework con muchas librerias y plugins puede apoyarse en <a href="http://google.com">google</a> y encontrar&aacute; muchos y muy buenos.
+					</p>
+				</div>
+				
+				<div class="span6">
+					<h3><img src="recursos/img/concepto.png" /> Concepto</h3>
+					<p>Un archivo, una clase, un m&eacute;todo.</p>
+					<p>
+						La metodolog&iacute;a propuesta por FFMD es la de aplicar una sola clase por archivo y un s&oacute;lo m&eacute;todo por clase. &iquest;Por qu&eacute;? Lastimosamente el c&oacute;digo se vuelve dif&iacute;cil de comprender al tener dos o m&aacute;s m&eacute;todos en una sola clase.
+					</p>
+					<p>Aclaro que esto es una apreciaci&oacute;n Personal.</p>
+				</div>
+				
+			</div>
+			
+			
+			<div class="row">
+				
+				<div class="span6">
+					<h3><img src="recursos/img/autor.png" /> Autor</h3>
+					<p>
+						Framework desarrollado por: Daniel Echeverr&iacute;a.
+						<br />
+						Para obtener la &uacute;ltima versi&oacute;n: <a href="https://github.com/daes12/FFMD">FFMD en GitHub.com</a>
+						<br />
+						Si utilizas el Framework agradecer&eacute; me env&iacute;es un enlace hacia el sitio que lo implementa para alegrarme que ha sido &uacute;til.
+						<br />
+						Env&iacute;a tus enlaces a: daes12@gmail.com
+					</p>
+				</div>
+				
+				<div class="span6">
+					<h3><img src="recursos/img/licencia.png" /> Licencia</h3>
+					<p>
+						<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">FFMD</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Daniel Echeverria</span> is licensed under a
+						<br />
+						<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>
+						<br />
+						<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+							<img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+						</a>
+					</p>
+				</div>
+				
+			</div>
+			
+			
+			<hr>
+			
+			
+			<div class="row">
+				<div class="span4">
+					<p>&copy; daes12 2012</p>
+				</div>
+				<div class="span4">
+					&nbsp;
+				</div>
+				<div class="span4">
+					<p>
+						<strong>Recursos utilizados en este manual:</strong>
+						<br />
+						<a href="http://jquery.com/">JQuery</a>
+						<br />
+						<a href="http://twitter.github.com/bootstrap/index.html">Bootstrap, from Twitter</a>
+						<br />
+						<a href="http://glyphicons.com/">Glyphicons Free</a>
+					</p>
+				</div>
+			</div>
+			
+		</div> <!-- /container -->
+		
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="recursos/js/jquery.min.js"></script>
+		<script src="recursos/js/bootstrap.min.js"></script>
+		
+	</body>
+	
+</html>

@@ -7,7 +7,7 @@
  *Idea principal: Framework personal, que utilice la menor cantidad de memoria y
  *espacio, rapido, configurable y reutilizable.
  *Concepto: Un archivo, una clase, un metodo.
- *Version: 0.03
+ *Version: 0.04
  *
  *Licencia: Creative Commons Attribution-ShareAlike 3.0 Unported License
 */

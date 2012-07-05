@@ -40,10 +40,11 @@ class ejemplo extends ffmd_controlador
 		
 		//Cargo los modelos y sus objetos
 		/*
-		include('aplicacion/modelo/ejemplo.php');
-		$MiModelo = new ejemplo();
-		$MiModelo->metodo_ejemplo($Variables);
+		include('aplicacion/modelo/ejemplo_m.php');
+		$MiModelo = new ejemplo_m();
+		$MiModelo->accion('');
 		*/
+		
 		
 		
 		//Cargo las vistas para imprimir valores

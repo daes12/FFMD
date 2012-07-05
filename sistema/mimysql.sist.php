@@ -38,7 +38,7 @@ class mimysql
 			$this->mysql_configuraciones->BD['contrasenha']
 		)
 		or//Si ocurre error, se guarda un log y se notifica al usuario
-		$this->no_existe->error('No conexion');
+		$this->no_existe->error('No conexion: '.mysql_error());
 		
 		
 		//Seleccion de la base de datos
@@ -47,7 +47,7 @@ class mimysql
 			$this->mysql_conexion
 		)
 		or//Si ocurre error, se guarda un log y se notifica al usuario
-		$this->no_existe->error('error seleccionar bd');
+		$this->no_existe->error('error seleccionar bd: '.mysql_error());
 		
 	}
 	

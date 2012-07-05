@@ -17,7 +17,7 @@ class ejemplo_m extends ffmd_modelo
 	 *@param string $Variables: Requiero "esto" en esta variable.
 	 *@return string ['ok'|'error'].
 	*/
-	function ejemplo_m($Variables)
+	function accion($Variables)
 	{
 		
 		//Se trabaja con las variables
