@@ -20,7 +20,7 @@ class no_existe_pag
 	function ver_404()
 	{
 		
-		echo 'Recurso no existe';
+		include('sistema/error/404.php');
 		exit();
 		
 	}
@@ -32,7 +32,10 @@ class no_existe_pag
 	function error($Error)
 	{
 		
-		echo 'Ocurri&oacute; un error: '.$Error;
+		$this->log($Error);
+		
+		include('sistema/error/error.php');
+		//Guardar en log-> 'Ocurri&oacute; un error: '.$Error;
 		exit();
 		
 	}
@@ -45,7 +48,18 @@ class no_existe_pag
 	{
 		
 		//Guardar en el log
-		//Falta crear la opci—n
+		if(!file_exists('aplicacion/bitacora/errores-'.date('Y-m-d').'.php'))
+		{
+			$Archivo = fopen('aplicacion/bitacora/errores-'.date('Y-m-d').'.php','a');
+			fwrite($Archivo, '<? if(!defined("SIST_ACTIVO")){ exit(); } ' . PHP_EOL);
+		}
+		else
+		{
+			$Archivo = fopen('aplicacion/bitacora/errores-'.date('Y-m-d').'.php','a');
+		}
+		
+		fwrite($Archivo, date('d-m-Y H:i:s').': '.$Error . PHP_EOL);
+		fclose($Archivo);
 		
 	}
 	

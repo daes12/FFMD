@@ -99,7 +99,7 @@
 					<p>
 						FFMD dispone de tres niveles de errores, los cuales pueden ser invocados en cualquier momento en la ejecuci&oacute;n del c&oacute;digo.
 						<pre>
-//Error cr&iacute;tico, detiene la ejecuci&oacute;n del c&oacute;ndigo
+//Error cr&iacute;tico, guarda un registro en el log de errores, detiene la ejecuci&oacute;n del c&oacute;ndigo
 $this->no_existe->error('No hay variables');
 
 //Error leve, guarda un registro en el log de errores, no detiene la ejecuci&oacute;n del c&oacute;digo
@@ -108,9 +108,6 @@ $this->no_existe->log('Error');
 //No existe la p&aacute;gina solicitada, detiene la ejecuci&oacute;n del c&oacute;digo
 $this->no_existe->ver_404();
 </pre>
-						
-						<strong>Nota:</strong> En esta versi&oacute;n aun no est&aacute; implementada la escritura de errores en un archivo (log).
-						
 					</p>
 					
 				</div>
